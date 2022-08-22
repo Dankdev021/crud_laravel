@@ -12,7 +12,7 @@
         <form action="/series/salvar" method="post">
             @csrf
             <div class="input-group mb-3">
-                <label for="nome" class="form-label mb-3">Nome</label>
+                <span class="input-group-text" id="basic-addon1">Nome</span>
                 <input type="text" id="nome" name="nome" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
             </div>
             <button type="submit" class="btn btn-primary">Adicionar</button>

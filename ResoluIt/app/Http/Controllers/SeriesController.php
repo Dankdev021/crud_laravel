@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Serie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -20,10 +21,13 @@ class SeriesController extends Controller
     }
 
     public function store (Request $request) {
-        $nomeSerie = $request->input('nome');
+        Serie::create($request->all());
 
-        if (DB::insert('INSERT INTO series (nome) VALUE (?)', [$nomeSerie])){
-            return 'ok';
-        }
+            return redirect('/series');
+    }
+
+    public function destroy (Request $request) {
+        Serie::destroy($request->serie);
+        return redirect('/series');
     }
 }
