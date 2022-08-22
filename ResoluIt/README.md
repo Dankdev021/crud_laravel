@@ -1,6 +1,8 @@
 Tópicos importantes
 
 DRIVER do banco = mysql
+Versão php: 8.0.2
+Versão php máquina local: 8.1.0
 
 Por que não usei SQLSERVER ? 
 Resposta: o gerenciadorr de pacotes do arch linux que é o AUR e o Pacman não encontraram as atualizações das extensões necessárias para instalação do SQL SERVER
