@@ -3,15 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SeriesController extends Controller
 {
     public function index (Request $request) {
-        $series = [
-            'Peaky Blinders',
-            'Stranger Things',
-            'Game of Thrones'
-        ];
+        $series = Serie::all();
 
         $title = 'Series';
 
@@ -20,5 +17,13 @@ class SeriesController extends Controller
 
     public function create() {
         return View('create');
+    }
+
+    public function store (Request $request) {
+        $nomeSerie = $request->input('nome');
+
+        if (DB::insert('INSERT INTO series (nome) VALUE (?)', [$nomeSerie])){
+            return 'ok';
+        }
     }
 }

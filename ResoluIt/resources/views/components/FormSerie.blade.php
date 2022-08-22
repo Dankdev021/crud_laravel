@@ -9,11 +9,14 @@
 </head>
 <body>
     <div class="container">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Nome</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-          </div>
-          <button type="button" class="btn btn-primary">Adicionar</button>
+        <form action="/series/salvar" method="post">
+            @csrf
+            <div class="input-group mb-3">
+                <label for="nome" class="form-label mb-3">Nome</label>
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
     </div>
 </body>
 </html>
