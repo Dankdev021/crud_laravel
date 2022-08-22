@@ -2,9 +2,9 @@
 <form action="{{ $action }}" method="post">
     @csrf
 
-    @isset($nome)
-    @method('PUT')
-    @endisset
+    @if($update)
+        @method('PUT')
+    @endif
     <div class="mb-3">
         <label for="nome" class="form-label">Nome:</label>
         <input type="text"
@@ -16,3 +16,5 @@
 
     <button type="submit" class="btn btn-primary">Adicionar</button>
 </form>
+
+
