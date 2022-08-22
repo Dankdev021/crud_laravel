@@ -1,5 +1,10 @@
 Tópicos importantes
 
+DRIVER do banco = mysql
+
+Por que não usei SQLSERVER ? 
+Resposta: o gerenciadorr de pacotes do arch linux que é o AUR e o Pacman não encontraram as atualizações das extensões necessárias para instalação do SQL SERVER
+
 1 - Não foi possível realizar o dump do banco de daods devido uma extensão libldap que não é encontrada pelo Pacman (Gerenciador de pacotes do sistema operacional utilizado)
 2 - Sistem operacional utilizado: Arch linux
 
@@ -13,6 +18,16 @@ Tópicos importantes
 4 - apos criar o banco basta rodar o comando a baixo em seu editor de texto ou IDE 
 
 === php artisan migrate ====
+
+Caso você encontre um erro devido a senha, basta acessar o arquivo. env e editar as seguintes variaveis
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Series
+DB_USERNAME=root
+DB_PASSWORD=123456
+
+Este é o modelo da minha máquina, basta configurar de acordo com a sua conexão
 
 
 Pronto para uso!
